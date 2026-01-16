@@ -1,0 +1,16 @@
+html,body{
+   background-color:#101922; 
+   color:white;
+   margin: 0;
+   padding: 0;
+}
+#win{
+    color: white;
+    background-color: red;
+    margin-top: 30vh;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    border: 8px solid black;
+    box-shadow: 0 -2px 5px 5px #ffffff;
+}
