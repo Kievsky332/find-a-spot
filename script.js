@@ -1,8 +1,11 @@
-
-
+const sec = document.querySelector("#time");
+const sec1 = document.querySelector("#time1");
+seconds = 1;
 document.addEventListener('DOMContentLoaded', function() {
+    start_count();
     const bam = document.getElementById('spot');
     const win = document.getElementById('win');
+    
     const sW = window.innerWidth; //Ширина
     const sH = window.innerHeight; //высота
 
@@ -33,6 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.play(); 
             win.style.display = "block";   
             bam.style.background="#ff0000";
+            stop_count();
         };
     });
 }); 
+function start_count(){
+    count = setInterval(upyat ,1000);
+    function upyat(){
+            seconds +=1;
+            console.log(seconds);
+            sec.innerHTML = seconds;
+            sec1.innerHTML = seconds;
+    }
+};
+function stop_count(){
+    clearInterval(count);
+};
