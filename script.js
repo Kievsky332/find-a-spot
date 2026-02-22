@@ -2,7 +2,7 @@ const sec = document.querySelector("#time");
 const sec1 = document.querySelector("#time1");
 seconds = 1;
 document.addEventListener('DOMContentLoaded', function() {
-    start_count();
+    start_count(); //делаем счет сколько человек не может найти
     const bam = document.getElementById('spot');
     const win = document.getElementById('win');
     
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     win.style.display = "none";
 
-    let x = Math.floor(Math.random() * sW+1);
-    let y = Math.floor(Math.random() * sH+1);
+    let x = Math.floor(Math.random() * sW+1); // рандомая  ширина
+    let y = Math.floor(Math.random() * sH+1); // рандомная высота
 
 
     bam.style.width = "100px";
@@ -23,14 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     bam.style.position = "absolute";
 
-    bam.style.top = y+"px";
-    bam.style.left = x+"px";
+    //смещаем
+    bam.style.top = y+"px"; // по y 
+    bam.style.left = x+"px"; //по x
 
-    console.log("Ваш экран \n Высота: "+sW+"\n Ширина: "+sH);
-    console.log("Точка  в \n x "+x+"\n y: "+y);
+    console.log("Ваш экран \n Высота: "+sW+"\n Ширина: "+sH); //выводим разрешения экрана
+    console.log("Точка  в \n x "+x+"\n y: "+y); //выводим где точка
 
  
-    document.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => { //проверяем что точка найдена
         if (e.clientX > x && e.clientX < x + 100 &&e.clientY > y && e.clientY < y + 100){ 
             var audio = new Audio('pip.mp3');
             audio.play(); 
