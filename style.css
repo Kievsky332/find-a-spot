@@ -5,6 +5,7 @@ html,body{
    padding: 0;
 }
 #win{
+    display: none;
     color: white;
     background-color: red;
     margin-top: 30vh;
@@ -13,4 +14,10 @@ html,body{
     border-radius: 20px;
     border: 8px solid black;
     box-shadow: 0 -2px 5px 5px #ffffff;
+}
+#spot{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
 }
