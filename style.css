@@ -1,8 +1,11 @@
-html,body{
-   background-color:#101922; 
-   color:white;
-   margin: 0;
+html, body {
+   background-color: #101922; 
+   color: white;
+   margin: 0;   /* Просто сбрасываем стандартные отступы браузера */
    padding: 0;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #win{
     display: none;
